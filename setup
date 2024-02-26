@@ -1,0 +1,25 @@
+#!/bin/bash
+
+#
+# Pre-flight checks
+#
+
+# Requires docker-compose
+if ! which docker-compose >/dev/null 2>&1; then
+  echo "Please install docker-compose."
+  exit 1
+fi
+
+#
+# Setup
+#
+
+if [[ ! -f default.vcl ]]; then
+  cp vcl/default.vcl .
+fi
+
+#
+# Finish
+#
+
+docker-compose up

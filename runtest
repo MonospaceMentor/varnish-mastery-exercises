@@ -1,0 +1,2 @@
+#!/bin/bash
+docker-compose exec varnish varnishtest /etc/varnish/tests/${1}.vtc

@@ -1,0 +1,11 @@
+varnishtest "Apache as Backend"
+
+varnish v1 -arg "-b web1:80" -start
+
+client c1 {
+	txreq
+	rxresp
+
+	expect resp.http.Server ~ "Apache"
+	expect resp.http.Via ~ "Varnish"
+} -run
