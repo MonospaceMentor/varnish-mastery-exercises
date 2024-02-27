@@ -27,3 +27,4 @@ VCL 'reload_20240221_120328_230' now active
 
 - [max-age](exercises/max-age)
 - [backend-change](exercises/backend-change)
+- [querysort](exercises/querysort)
